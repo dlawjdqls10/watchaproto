@@ -6,7 +6,7 @@ def post_list(request):
 
 
 def poster_detail(request):
-    return render(request, 'article/post_detail.html')
+    return render(request, 'article/poster_detail.html')
 
 
 
