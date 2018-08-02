@@ -1,0 +1,80 @@
+{% load static %}
+<html>
+<head>
+	<title>왓챠 :: 오늘 영화도 부탁해!</title>
+	<meta charset="utf-8">
+  <link rel="stylesheet" href="{% static 'css/article.css' %}">
+</head>
+<body>
+<nav>
+	<div class="payment-bar">
+		<div class="payment-bar_text">
+			[왓챠플레이 앱출시] 지금 다운로드하고, 첫달은 무료로 감상하세요!
+		</div>
+		<a class="payment-bar_button" href="https://play.watcha.net/home">감상하기</a>
+	</div>
+	<div class="header">
+		<ul class="nav_button">
+			<li class="logo">
+				<a href="{% url 'main' %}"><img src="{% static 'img/logo.png' %}" width="30" height="30"></a>
+			</li>
+			<li class="nav_menu">
+				<a href="{% url 'boxoffice' %}">박스오피스</a>
+			</li>
+			<li class="nav_menu"><a href="{% url 'recommend' %}">추천영화</a></li>
+			<li class="nav_menu"><a href="{% url 'add_evaluation' %}">평가늘리기</a></li>
+		</ul>
+		<form class="search">
+			<div class="input-wrapper">
+
+				<span id="search-icon"><img src="{% static 'img/search-icon.png' %}" style="width: 30px; height: 30px;"></span>
+				<input type="search" class="search-bar">
+			</div>
+		</form>
+		<div id="usermenu">
+			<div class="me">
+				<a class="name" href="#">
+					박지영
+					<img src="{% static 'img/profile.jpg' %}" width="30" height="30">
+				</a>
+			</div>
+		</div>
+	</div>
+</nav>
+{% block content %}
+{% endblock %}
+<div id="footer">
+  <div class="wrapper responsive-mask">
+    <div class="upper">
+      <div class="name">watcha</div>
+
+      <div class="sns">
+        <a href="http://facebook.com/watcha.net" target="_blank" class="fb">페이스북</a>
+        <a href="https://twitter.com/watcha_app" target="_blank" class="twitter">트위터</a>
+        <a href="http://frograms.com/blog" target="_blank" class="blog">블로그</a>
+      </div>
+    </div>
+
+    <div class="count-like-tweet">
+      <div class="count">
+        <div class="text">
+          <span class="star-icon"></span>
+          <span class="number">408,993,297</span>
+          개의 별점 평가가 쌓이고 있습니다.
+        </div>
+      </div>
+
+      <div class="social_plugin_wrapper">
+        <div class="fb-like plugin fb_iframe_widget" data-href="http://watcha.net" data-send="false" data-layout="button_count" data-width="130" data-show-faces="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=126765124079533&amp;container_width=100&amp;href=http%3A%2F%2Fwatcha.net%2F&amp;layout=button_count&amp;locale=ko_KR&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=130"><span style="vertical-align: bottom; width: 94px; height: 20px;"><iframe name="f315901b1e8907c" width="130px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:like Facebook Social Plugin" src="https://www.facebook.com/v2.8/plugins/like.php?app_id=126765124079533&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2F3tXFuAe2xUh.js%3Fversion%3D42%23cb%3Df14c3a6bfc1e52c%26domain%3Dwatcha.net%26origin%3Dhttps%253A%252F%252Fwatcha.net%252Ff22528d159b59f8%26relation%3Dparent.parent&amp;container_width=100&amp;href=http%3A%2F%2Fwatcha.net%2F&amp;layout=button_count&amp;locale=ko_KR&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=130" style="border: none; visibility: visible; width: 94px; height: 20px;" class=""></iframe></span></div>
+        <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 60px; height: 20px;" title="Twitter Tweet Button" src="https://platform.twitter.com/widgets/tweet_button.cb6df5c11eb74c4885e17101a777cb60.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=https%3A%2F%2Fwatcha.net%2F&amp;related=watcha_app&amp;size=m&amp;text=%EB%82%B4%20%EC%B7%A8%ED%96%A5%EC%9D%84%20%EB%B6%84%EC%84%9D%ED%95%98%EB%8A%94%20%EC%98%81%ED%99%94%20%EC%B6%94%EC%B2%9C%20-%20%EC%99%93%EC%B1%A0!%20%EC%98%88%EC%A0%84%EC%97%90%20%EB%B3%B8%20%EC%98%81%ED%99%94%EC%97%90%20%EB%B3%84%EC%A0%90%EB%A7%8C%20%EB%A7%A4%EA%B8%B0%EB%A9%B4%2C%20%EC%99%93%EC%B1%A0%EA%B0%80%20%EB%82%B4%20%EC%B7%A8%ED%96%A5%EC%9D%84%20%EB%B6%84%EC%84%9D%ED%95%B4%EC%84%9C%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EC%98%81%ED%99%94%EB%A5%BC%20%EC%B6%94%EC%B2%9C%ED%95%B4%EB%93%9C%EB%A0%A4%EC%9A%94!&amp;time=1533117140142&amp;type=share&amp;url=http%3A%2F%2Fwatcha.net" data-url="http://watcha.net"></iframe>
+      </div>
+    </div>
+    <div class="info">
+      사업자명 (주식회사 왓챠) 사업자번호 (211-88-66013)
+      Copyright © 2011–2018 by Watcha, Inc. All rights reserved
+  <a class="ask" href="#"><img src="{% static 'img/ask.png' %}" width="39" height="39"></a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

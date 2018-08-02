@@ -1,0 +1,36 @@
+{% extends 'article/base.html' %}
+{% block content %}
+<div id="contents" style="min-height: 596px;">
+	<div style="height: 500px; background-color: yellow;"></div>
+	<div class="recommend-wrapper">
+		<ol class="section-wrapper">
+			<li id="boxoffice" class="section">
+				<h3 class="title">오늘의 BOX OFFICE</h3>
+				<div class="vertical-list">
+					<ul class="grid-container" style="position: relative; width: 2880px; height: 670px;">
+						<div class="ranking">
+							<h4 class="head">영화 랭킹</h4>
+							<div class="inner">
+								<ol class="list">
+                  {% for post in posts %}
+                    <li class="rank" style="list-style-type: decimal; color: white; line-height: 30px; width: 150px;"><a style="color: white;" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></li>
+                  {% endfor %}
+								</ol>
+							</div>
+						</div>
+					</ul>
+				</div>
+			</li>
+			<li id="howmany" class="section">
+				<h3 class="title">여태 살면서 나는 영화를 몇 편이나 봤을까?</h3>
+			</li>
+			<li id="new" class="section">
+				<h3 class="title">왓챠플레이 신작 & 박스오피스 신작</h3>
+			</li>
+			<li id="genre" class="section">
+				<h3 class="title">장르별 신작</h3>
+			</li>
+		</ol>
+	</div>
+</div>
+{% endblock %}
